@@ -57,10 +57,8 @@ const Calendars = ({
   };
   return /*#__PURE__*/React.createElement(Calendar, _extends({
     id: id,
-    name: name
-  }, view ? {
-    view
-  } : "", {
+    name: name,
+    view : view || "",
     inputClassName: inputClassName,
     className: className,
     onChange: onValidateDate,
