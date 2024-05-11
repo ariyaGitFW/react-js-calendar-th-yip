@@ -1,0 +1,27 @@
+{
+  "name": "js-calendar-th",
+  "version": "0.1.2",
+  "description": "calendar-th",
+  "main": "Calendar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meteefilm/calendar-th.git"
+  },
+  "keywords": [
+    "calendar",
+    "calendar-th",
+    "date"
+  ],
+  "author": "Metee Khumchat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meteefilm/calendar-th/issues"
+  },
+  "homepage": "https://github.com/meteefilm/calendar-th#readme",
+  "dependencies": {
+    "utility-fns": "^1.6.7"
+  }
+}
