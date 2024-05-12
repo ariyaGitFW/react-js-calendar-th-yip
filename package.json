@@ -1,8 +1,9 @@
 {
-  "name": "js-calendar-th",
-  "version": "0.1.5",
+  "name": "react-js-calendar-th",
+  "version": "0.1.2",
   "description": "calendar-th",
-  "main": "index.js",
+  "main": "dist/calendar/Calendar.js",
+  "types": "dist/calendar/calendar.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish:npm": "babel src -d dist --copy-files"
@@ -23,11 +24,6 @@
   },
   "homepage": "https://github.com/meteefilm/calendar-th#readme",
   "private": false,
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  },
   "dependencies": {
     "utility-fns": "^1.6.7"
   },
@@ -35,7 +31,7 @@
     "@types/react": "^17.0.0 || ^18.0.0",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
-},
+  },
   "devDependencies": {
     "@babel/cli": "^7.24.5",
     "@babel/preset-react": "^7.24.1"

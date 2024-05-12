@@ -3,7 +3,7 @@ import * as React from 'react';
 import { KeyFilter } from '../keyfilter/KeyFilter';
 import { Tooltip } from '../tooltip/Tooltip';
 import { classNames, DomHandler, ObjectUtils } from '../utils/Utils';
-export const InputText = React.memo(React.forwardRef((props, ref) => {
+export const InputText = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((props, ref) => {
   const elementRef = React.useRef(ref);
   const onKeyDown = event => {
     props.onKeyDown && props.onKeyDown(event);

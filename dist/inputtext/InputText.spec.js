@@ -159,7 +159,7 @@ describe('InputText', () => {
   test('when input is using onInput make sure it is called', async () => {
     // Arrange
     const inputOn = jest.fn();
-    const ref = React.createRef();
+    const ref = /*#__PURE__*/React.createRef();
     const {
       container
     } = render( /*#__PURE__*/React.createElement(InputText, {

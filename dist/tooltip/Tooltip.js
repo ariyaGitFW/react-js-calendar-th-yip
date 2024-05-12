@@ -4,7 +4,7 @@ import PrimeReact from '../api/Api';
 import { useMountEffect, useOverlayScrollListener, useResizeListener, useUnmountEffect, useUpdateEffect } from '../hooks/Hooks';
 import { Portal } from '../portal/Portal';
 import { classNames, DomHandler, ObjectUtils, ZIndexUtils } from '../utils/Utils';
-export const Tooltip = React.memo(React.forwardRef((props, ref) => {
+export const Tooltip = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((props, ref) => {
   const [visibleState, setVisibleState] = React.useState(false);
   const [positionState, setPositionState] = React.useState(props.position);
   const [classNameState, setClassNameState] = React.useState('');

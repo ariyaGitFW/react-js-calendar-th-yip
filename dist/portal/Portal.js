@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import PrimeReact from '../api/Api';
 import { useMountEffect, useUnmountEffect, useUpdateEffect } from '../hooks/Hooks';
 import { DomHandler } from '../utils/Utils';
-export const Portal = React.memo(props => {
+export const Portal = /*#__PURE__*/React.memo(props => {
   const [mountedState, setMountedState] = React.useState(props.visible && DomHandler.hasDOM());
   useMountEffect(() => {
     if (DomHandler.hasDOM() && !mountedState) {
@@ -20,7 +20,7 @@ export const Portal = React.memo(props => {
   const element = props.element || props.children;
   if (element && mountedState) {
     const appendTo = props.appendTo || PrimeReact.appendTo || document.body;
-    return appendTo === 'self' ? element : ReactDOM.createPortal(element, appendTo);
+    return appendTo === 'self' ? element : /*#__PURE__*/ReactDOM.createPortal(element, appendTo);
   }
   return null;
 });

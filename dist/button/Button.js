@@ -3,7 +3,7 @@ import React from 'react';
 import { Ripple } from '../ripple/Ripple';
 import { Tooltip } from '../tooltip/Tooltip';
 import { classNames, IconUtils, ObjectUtils } from '../utils/Utils';
-export const Button = React.memo(React.forwardRef((props, ref) => {
+export const Button = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((props, ref) => {
   const elementRef = React.useRef(ref);
   React.useEffect(() => {
     ObjectUtils.combinedRefs(elementRef, ref);

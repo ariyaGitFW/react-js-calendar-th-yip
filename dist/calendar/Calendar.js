@@ -8,7 +8,7 @@ import { OverlayService } from '../overlayservice/OverlayService';
 import { Ripple } from '../ripple/Ripple';
 import { classNames, DomHandler, mask, ObjectUtils, UniqueComponentId, ZIndexUtils } from '../utils/Utils';
 import { CalendarPanel } from './CalendarPanel';
-export const Calendar = React.memo(React.forwardRef((props, ref) => {
+export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((props, ref) => {
   const [focusedState, setFocusedState] = React.useState(false);
   const [overlayVisibleState, setOverlayVisibleState] = React.useState(false);
   const [viewDateState, setViewDateState] = React.useState(null);

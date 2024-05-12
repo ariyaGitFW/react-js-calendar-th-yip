@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CSSTransition } from '../csstransition/CSSTransition';
 import { Portal } from '../portal/Portal';
-export const CalendarPanel = React.forwardRef((props, ref) => {
+export const CalendarPanel = /*#__PURE__*/React.forwardRef((props, ref) => {
   const createElement = () => {
     return /*#__PURE__*/React.createElement(CSSTransition, {
       nodeRef: ref,

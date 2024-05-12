@@ -3,7 +3,7 @@ import { CSSTransition as ReactCSSTransition } from 'react-transition-group';
 import PrimeReact from '../api/Api';
 import { useUpdateEffect } from '../hooks/Hooks';
 import { ObjectUtils } from '../utils/Utils';
-export const CSSTransition = React.forwardRef((props, ref) => {
+export const CSSTransition = /*#__PURE__*/React.forwardRef((props, ref) => {
   const disabled = props.disabled || props.options && props.options.disabled || !PrimeReact.cssTransition;
   const onEnter = (node, isAppearing) => {
     props.onEnter && props.onEnter(node, isAppearing); // component

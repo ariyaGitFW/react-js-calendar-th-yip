@@ -2,7 +2,7 @@ import * as React from 'react';
 import PrimeReact from '../api/Api';
 import { useMountEffect, useUnmountEffect, useUpdateEffect } from '../hooks/Hooks';
 import { DomHandler } from '../utils/Utils';
-export const Ripple = React.memo(React.forwardRef(() => {
+export const Ripple = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef(() => {
   const inkRef = React.useRef(null);
   const targetRef = React.useRef(null);
   const getTarget = () => {
