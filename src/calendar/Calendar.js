@@ -3293,7 +3293,7 @@ export const Calendar = React.memo(
                 let { today, clear } = localeOptions(props.locale);
 
                 if(props.timeOnly){
-                    today = props.locale === 'en' ? 'On Time' : 'เวลานี้';
+                    today = props.locale === 'th' ? 'เวลานี้':'On Time';
                 }
 
                 return (
@@ -3417,7 +3417,7 @@ Calendar.defaultProps = {
     baseZIndex: 0,
     className: null,
     clearButtonClassName: 'p-button-secondary',
-    dateFormat: null,
+    dateFormat: 'dd/mm/yy',
     dateTemplate: null,
     decadeTemplate: null,
     disabled: false,
