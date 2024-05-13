@@ -10,6 +10,10 @@ npm install react-js-calendar-th
 ```js
 import { Calendar } from 'react-js-calendar-th';
 
+//If you use primereact, there is no need import this css
+import 'react-js-calendar-th/dist/css/Calendar.css'
+import 'react-js-calendar-th/dist/css/main.css'
+
 const [date, setDate] = useState(null);
 
 return (
