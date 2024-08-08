@@ -2040,7 +2040,7 @@ export const Calendar = React.memo(
             }
 
             let formattedValue = '';
-
+            let diffYear = props.locale === 'th' ? 543 : 0;
             if (value) {
                 try {
                     if (isSingleSelection()) {
@@ -2049,7 +2049,7 @@ export const Calendar = React.memo(
                             let _dateFormat = formattedValue.split(' ');
                             let _date = _dateFormat[0].split('/');
                             if (_date.length === 3) {
-                                formattedValue = _date[0] + '/' + _date[1] + '/' + (parseInt(_date[2]) + 543);
+                                formattedValue = _date[0] + '/' + _date[1] + '/' + (parseInt(_date[2]) + diffYear);
                                 if (_dateFormat.length === 2) {
                                     formattedValue += ' ' + _dateFormat[1];
                                 }

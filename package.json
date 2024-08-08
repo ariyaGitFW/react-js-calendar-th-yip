@@ -29,6 +29,7 @@
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
     "primereact": "^9.2.0",
+    "react-js-calendar-th": "file:",
     "react-transition-group": "^4.4.5",
     "utility-fns": "^1.6.7"
   },
