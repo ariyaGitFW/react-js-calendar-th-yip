@@ -110,7 +110,7 @@ export const Calendar = React.memo(
                 let day = '',
                     time = '';
                 let newDate = new Date();
-                let diffYear = props.locale === 'th' ? 543 : 0;
+                let diffYear = props.locale === 'th' ? 543 + 10 : 0;
 
                 val = val.split(' ');
 
@@ -462,7 +462,7 @@ export const Calendar = React.memo(
         const onYearDropdownChange = (event, value) => {
             const currentViewDate = getViewDate();
             let newViewDate = new Date(currentViewDate.getTime());
-            let diffYear = props.locale === 'th' ? 543 : 0;
+            let diffYear = props.locale === 'th' ? 543 + 10 : 0;
             newViewDate.setFullYear(parseInt(value - diffYear, 10));
 
             updateViewDate(event, newViewDate);
@@ -2040,7 +2040,7 @@ export const Calendar = React.memo(
             }
 
             let formattedValue = '';
-            let diffYear = props.locale === 'th' ? 543 : 0;
+            let diffYear = props.locale === 'th' ? 543 + 10 : 0;
             if (value) {
                 try {
                     if (isSingleSelection()) {
@@ -2735,7 +2735,7 @@ export const Calendar = React.memo(
         const createTitleYearElement = () => {
             if (props.yearNavigator) {
                 let yearOptions = [];
-                let diffYear = props.locale === 'th' ? 543 : 0;
+                let diffYear = props.locale === 'th' ? 543 + 10 : 0;
                 const years = props.yearRange.split(':');
                 const yearStart = parseInt(years[0], 10)+diffYear;
                 const yearEnd = parseInt(years[1], 10)+diffYear;
@@ -2779,7 +2779,7 @@ export const Calendar = React.memo(
 
                 return content;
             }
-            let diffYear = props.locale === 'th' ? 543 : 0;
+            let diffYear = props.locale === 'th' ? 543 + 10 : 0;
             return (
                 currentView !== 'year' && (
                     <button className="p-datepicker-year p-link" onClick={switchToYearView} disabled={switchViewButtonDisabled()}>
@@ -3337,7 +3337,7 @@ export const Calendar = React.memo(
 
         const createYearPicker = () => {
             if (currentView === 'year') {
-                let diffYear = props.locale === 'th' ? 543 : 0;
+                let diffYear = props.locale === 'th' ? 543 + 10 : 0;
                 return (
                     <div className="p-yearpicker">
                         {yearPickerValues().map((y, i) => {
