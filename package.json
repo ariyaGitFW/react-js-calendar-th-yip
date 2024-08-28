@@ -1,6 +1,6 @@
 {
   "name": "react-js-calendar-th-yip",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "calendar-th",
   "main": "dist/calendar/Calendar.js",
   "types": "dist/calendar/calendar.d.ts",

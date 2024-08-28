@@ -100,7 +100,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
       let day = '',
         time = '';
       let newDate = new Date();
-      let diffYear = props.locale === 'th' ? 543 + 10 : 0;
+      let diffYear = props.locale === 'th' ? 543 : 0;
       val = val.split(' ');
       if (val.length === 1) {
         day = val[0].replaceAll('/', '');
@@ -108,7 +108,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
         day = val[0].replaceAll('/', '');
         time = val[1].replaceAll(':', '');
       }
-      if (day.length === 8) {
+      if (day.length === 8 || day.length === 6) {
         let dd = '',
           mm = '',
           yyyy = '',
@@ -382,7 +382,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
   const onYearDropdownChange = (event, value) => {
     const currentViewDate = getViewDate();
     let newViewDate = new Date(currentViewDate.getTime());
-    let diffYear = props.locale === 'th' ? 543 + 10 : 0;
+    let diffYear = props.locale === 'th' ? 543 : 0;
     newViewDate.setFullYear(parseInt(value - diffYear, 10));
     updateViewDate(event, newViewDate);
   };
@@ -1742,7 +1742,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
             let _dateFormat = formattedValue.split(' ');
             let _date = _dateFormat[0].split('/');
             if (_date.length === 3) {
-              formattedValue = _date[0] + '/' + _date[1] + '/' + (parseInt(_date[2]) + 543 + 10);
+              formattedValue = _date[0] + '/' + _date[1] + '/' + (parseInt(_date[2]) + 543);
               if (_dateFormat.length === 2) {
                 formattedValue += ' ' + _dateFormat[1];
               }
@@ -2337,7 +2337,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
   const createTitleYearElement = () => {
     if (props.yearNavigator) {
       let yearOptions = [];
-      let diffYear = props.locale === 'th' ? 543 + 10 : 0;
+      let diffYear = props.locale === 'th' ? 543 : 0;
       const years = props.yearRange.split(':');
       const yearStart = parseInt(years[0], 10) + diffYear;
       const yearEnd = parseInt(years[1], 10) + diffYear;
@@ -2378,7 +2378,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
       }
       return content;
     }
-    let diffYear = props.locale === 'th' ? 543 + 10 : 0;
+    let diffYear = props.locale === 'th' ? 543 : 0;
     return currentView !== 'year' && /*#__PURE__*/React.createElement("button", {
       className: "p-datepicker-year p-link",
       onClick: switchToYearView,
@@ -2821,7 +2821,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
   };
   const createYearPicker = () => {
     if (currentView === 'year') {
-      let diffYear = props.locale === 'th' ? 543 + 10 : 0;
+      let diffYear = props.locale === 'th' ? 543 : 0;
       return /*#__PURE__*/React.createElement("div", {
         className: "p-yearpicker"
       }, yearPickerValues().map((y, i) => {
