@@ -1740,12 +1740,21 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
           formattedValue = isValidDate(value) ? formatDateTime(value) : props.keepInvalid ? value : '';
           if (formattedValue !== '') {
             let _dateFormat = formattedValue.split(' ');
-            let _date = _dateFormat[0].split('-');
+            let _date = _dateFormat[0].includes('-') ? _dateFormat[0].split('-') : _dateFormat[0].split('/');
+
+            let separator = _dateFormat[0].includes('-') ? '-' : '/';
+
             if (_date.length === 3) {
-              formattedValue = _date[0] + '-' + _date[1] + '-' + (parseInt(_date[2]) + 543);
-              if (_dateFormat.length === 2) {
-                formattedValue += ' ' + _dateFormat[1];
-              }
+              formattedValue = _date[0] + separator + _date[1] + separator + (parseInt(_date[2]) + 543);
+              // if (_dateFormat.length === 2) {
+              //   formattedValue += ' ' + _dateFormat[1];
+              // }
+            } else if (_date.length === 2) {
+              formattedValue = _date[0] + separator + (parseInt(_date[1]) + 543);
+            }
+
+            if (_dateFormat.length === 2) {
+              formattedValue += ' ' + _dateFormat[1];
             }
           }
         } else if (isMultipleSelection()) {
