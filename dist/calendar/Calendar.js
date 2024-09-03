@@ -1749,8 +1749,15 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
               // if (_dateFormat.length === 2) {
               //   formattedValue += ' ' + _dateFormat[1];
               // }
-            } else if (_date.length === 2) {
+            }
+            else if (_date.length === 2) {
               formattedValue = _date[0] + separator + (parseInt(_date[1]) + 543);
+            }
+            else if (_date.length === 1 && props.dateFormat == "yy") {
+              formattedValue = (parseInt(_date[0]) + 543);
+            }
+            else if (_date.length === 1 && props.dateFormat == "mm") {
+              formattedValue = _date[0] == '01' ? 'ม.ค' : _date[0];
             }
 
             if (_dateFormat.length === 2) {
