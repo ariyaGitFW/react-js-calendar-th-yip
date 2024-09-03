@@ -108,7 +108,7 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
         day = val[0].replaceAll('/', '');
         time = val[1].replaceAll(':', '');
       }
-      if (day.length === 8 || day.length === 6) {
+      if (day.length === 8) {
         let dd = '',
           mm = '',
           yyyy = '',
@@ -1740,9 +1740,9 @@ export const Calendar = /*#__PURE__*/React.memo( /*#__PURE__*/React.forwardRef((
           formattedValue = isValidDate(value) ? formatDateTime(value) : props.keepInvalid ? value : '';
           if (formattedValue !== '') {
             let _dateFormat = formattedValue.split(' ');
-            let _date = _dateFormat[0].split('/');
+            let _date = _dateFormat[0].split('-');
             if (_date.length === 3) {
-              formattedValue = _date[0] + '/' + _date[1] + '/' + (parseInt(_date[2]) + 543);
+              formattedValue = _date[0] + '-' + _date[1] + '-' + (parseInt(_date[2]) + 543);
               if (_dateFormat.length === 2) {
                 formattedValue += ' ' + _dateFormat[1];
               }
